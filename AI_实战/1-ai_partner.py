@@ -36,7 +36,7 @@ for msg in st.session_state.messages:
     st.chat_message('assistant').write(msg['content'])
 
 # 创建与AI大模型交互的客户端对象
-client = OpenAI(api_key=os.environ.get('DEEPSEEK_API_KEY'), base_url="https://api.deepseek.com")
+client = OpenAI(api_key='sk-ea459440fe7e402886c5b31eba372d17', base_url="https://api.deepseek.com")
 
 # 消息输入框
 prompt = st.chat_input('请输入您的问题')
@@ -56,7 +56,7 @@ if prompt:
     stream=False
   )
 
-  # 输出大模型返回的结果
+  # 输出大模型返回的结果(非流式输出)
   ai_content = response.choices[0].message.content
   print('<----------- 大模型返回的结果：', ai_content)
   st.chat_message('assistant').write(ai_content)
