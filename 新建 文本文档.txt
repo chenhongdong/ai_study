@@ -1,1 +1,7 @@
 sk-ea459440fe7e402886c5b31eba372d17
+
+
+# github-host
+140.82.112.3 github.com
+185.199.108.133 raw.githubusercontent.com
+185.199.108.133 assets-cdn.github.com

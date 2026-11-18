@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from book import book
 from user import user
 
+from tortoise.contrib.fastapi import register_tortoise
+from settings import TORTOISE_ORM
+
 
 app = FastAPI()
 # 路由分发到/book和/user，方便对不同的模块及接口进行管理，不至于都写在根路由下
