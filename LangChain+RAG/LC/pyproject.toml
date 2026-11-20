@@ -1,0 +1,33 @@
+[project]
+name = "lc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "chdlovejob", email = "chdlovejob@163.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "alibabacloud-oss-v2>=1.4.1",
+    "fastapi>=0.165.0",
+    "ipywidgets>=8.1.9",
+    "langchain>=1.5.0",
+    "langchain-deepseek>=1.2.0",
+    "langchain-tavily>=0.2.18",
+    "langgraph-checkpoint-sqlite>=3.1.3",
+    "langgraph-cli[inmem]>=0.4.43",
+    "notebook>=7.6.5",
+    "openai>=3.55.0",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+lc = "lc:main"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
